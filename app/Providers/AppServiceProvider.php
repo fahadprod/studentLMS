@@ -41,6 +41,8 @@ class AppServiceProvider extends ServiceProvider
                 return Valuestore::make((base_path() . '/general_settings.json'));
             });
         }
+        
+        Schema::defaultStringLength(191);
     }
 
     public function boot()
